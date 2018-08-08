@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <title>测试helloworld</title>
+    <style>
+        #content{width:200px;height:200px;background-color:#ff4;color:white;text-align:center;line-height:200px;}
+    </style>
+</head>
+<body>
+    <div id="content">孤独她呀，像个哑巴</div>
+    <script>
+        var content = document.getElementById("content");
+        if(content.addEventListener){
+            content.addEventListener("click",function(){alert("clicked")},false);
+        }else if(content.attachEvent){
+            content.attachEvent("onclick",function(){alert("clicked");});
+        }else{
+            content["onclick"] = function(){alert("clicked")};
+        }
+    </script>
+</body>
+</html>
